@@ -11,7 +11,7 @@ This is just for my personal training about MERN stack developer jonuery.
 
 ## Lessons Learned
 
-I learned about react js and it's not too difficult for me but this is a good challenge for me and his project, challenges ,  learning jonuery is very smart and fun.Thank Dave gray for everything.
+I learned about react js and it's not too difficult for me but this is a good challenge for me and his project, challenges and learning jonuery is very smart and fun.Thank Dave gray for everything.
 
 
 ## Roadmap
