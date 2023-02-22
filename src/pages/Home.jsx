@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import Feed from "../components/Feed";
+import DataContext from "../context/DataContext";
 
-function HomePage({ posts, loading, errorMsg }) {
+function HomePage() {
+  const { posts, loading, errorMsg } = useContext(DataContext);
+
   return (
     <div>
       {loading && <p>loading ...</p>}

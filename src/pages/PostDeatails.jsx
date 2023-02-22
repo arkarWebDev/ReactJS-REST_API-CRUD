@@ -1,15 +1,32 @@
 import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { BiArrowBack } from "react-icons/bi";
+import DataContext from "../context/DataContext";
+import { useNavigate } from "react-router-dom";
+import apiCall from "../api/apiCall";
 
-const PostDeatailsPage = ({ posts, deletePost }) => {
+const PostDeatailsPage = () => {
+  const { posts, setPosts } = useContext(DataContext);
+
   const { id } = useParams();
   const [post, setPost] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     findPost();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const deletePost = async (id) => {
+    try {
+      await apiCall.delete(`posts/${id}`);
+      const feedbackPosts = posts.filter((post) => post.id.toString() !== id);
+      setPosts(feedbackPosts);
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   const findPost = () => {
     const finedPost = posts.filter((post) => post.id === Number(id));
