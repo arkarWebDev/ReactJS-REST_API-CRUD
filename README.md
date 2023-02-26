@@ -50,6 +50,6 @@ I learned about react js and it's not too difficult for me but this is a good ch
 
 - Context API
 
-- Covert to Easy Peasy Redux from Context API [@Repo] (https://github.com/arkarWebDev/React-with-Easy-Peasy)
+- Covert to Easy Peasy Redux from Context API [@Repo](https://github.com/arkarWebDev/React-with-Easy-Peasy)
 
 - Devloping React App
